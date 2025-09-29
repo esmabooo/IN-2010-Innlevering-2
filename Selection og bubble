@@ -1,0 +1,29 @@
+def selectionSort(A):
+    n=len(A)
+    # i=0
+    for i in range(n-1):
+        k=i
+        # j = i+1
+        for j in range (i+1,n):
+            if A[j]<A[k]:
+                k=j
+            if i != k:
+                A[i],A[k] = A[k],A[i]
+
+    return A
+
+liste = [80,91,33,50,70,13,321,12]
+
+print(selectionSort(liste))
+
+
+def bubbleSort(A):
+    n= len(A)+1  #Den kjører ikke nok ganger idk why, men denne redda koden
+    for i in range (n-2):
+        for j in range (0,n-i-2):
+            if A[j] > A[j+1]:
+                A[j],A[j+1]=A[j+1],A[j]
+    return A
+
+
+print(bubbleSort(liste))
